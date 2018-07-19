@@ -2,8 +2,7 @@
 <h3 *ngIf="!isLoading">Select a hero:</h3>
 
 <nav>
-  <!--<button (click)="getHeroes()" class="btn btn-primary">Refresh</button>-->
-  <a *ngFor="let hero of heroes | async" (click)="select(hero)">{{hero.name}}</a>
+  <a *ngFor="let hero of heroes | async" (click)="select(hero)" class="button btn-info" role="button">{{hero.name}}</a>
 </nav>
 
 <div *ngIf="selectedHero">
